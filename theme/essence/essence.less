@@ -1,0 +1,77 @@
+@width: 120px;
+
+@viewportColor: #ff9d3d;
+@viewportThickness: 5px;
+@viewportWidth: (@width + (2 * @viewportThickness) + 2);
+@viewportLeft: 0px;
+
+.navigatify {
+
+  // debug
+  top: 20px;
+  right: 20px;
+
+  .wrapper {
+    width: @width;
+    padding: (@viewportThickness + 1);
+
+    // border: 1px solid red;
+  }
+
+  .container {
+
+  }
+
+  .section {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #fff;
+    background-color: #2A354A;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin-bottom: 1px;
+  }
+
+  .viewport-top {
+    background-color: @viewportColor;
+    width: 100%;
+    height: @viewportThickness;
+    left: @viewportLeft;
+    border-top-left-radius: @viewportThickness;
+    border-top-right-radius: @viewportThickness;
+
+    top: 0; 
+  }
+
+  .viewport-left {
+    width: @viewportThickness;
+    top: @viewportThickness;
+    background-color: @viewportColor;
+    left: 0;
+
+    height:  (@viewportThickness * 7);
+  }
+
+  .viewport-right {
+    width: @viewportThickness;
+    top: @viewportThickness;
+    background-color: @viewportColor;
+    right: 0;
+
+    height:  (@viewportThickness * 7);
+  }
+
+  .viewport-bottom {
+    background-color: @viewportColor;
+    width: 100%;
+    height: @viewportThickness;
+    left: @viewportLeft;
+    border-bottom-left-radius: @viewportThickness;
+    border-bottom-right-radius: @viewportThickness;
+
+    top: (@viewportThickness * 8);
+  }
+
+
+}
